@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.swaranga.history-buttons",
+  "name": "History Buttons",
+  "version": "1.0.0",
+  "author": "Swaranga Sarma",
+  "description": "Bar buttons that open notification history and the clipboard manager",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "History Buttons",
+    "description": "Open notification history or the clipboard manager from the bar",
+    "category": "Utilities",
+    "allowMultiple": true,
+    "defaultSection": "right",
+    "schema": [
+      {
+        "key": "buttons",
+        "type": "multiselect",
+        "label": "Buttons",
+        "description": "Choose which buttons this widget shows. Leave empty to show both.",
+        "noSelectionText": "Both buttons",
+        "placeholderText": "Search buttons...",
+        "emptyText": "No buttons",
+        "options": [
+          {
+            "value": "notifications",
+            "label": "Notification history",
+            "description": "Show recent notifications again; right-click dismisses all"
+          },
+          {
+            "value": "clipboard",
+            "label": "Clipboard history",
+            "description": "Open the clipboard manager"
+          }
+        ]
+      }
+    ]
+  }
+}
