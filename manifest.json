@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "io.github.swaranga.history-buttons",
   "name": "History Buttons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Swaranga Sarma",
   "description": "Bar buttons that open notification history and the clipboard manager",
   "kinds": [
@@ -30,7 +30,7 @@
           {
             "value": "notifications",
             "label": "Notification history",
-            "description": "Show recent notifications again; right-click dismisses all"
+            "description": "Show or hide recent notifications; right-click dismisses all"
           },
           {
             "value": "clipboard",

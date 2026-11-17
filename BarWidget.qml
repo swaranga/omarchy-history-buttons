@@ -28,6 +28,13 @@ BarWidget {
     if (root.bar) root.bar.run(command)
   }
 
+  // Hide the cards when any are on screen, otherwise bring the recent ones
+  // back, so a second click undoes the first. Asking the shell on every click
+  // stays right after cards time out or are dismissed some other way.
+  readonly property string toggleHistory: "if [ \"$(omarchy-shell notifications count)\" -gt 0 ] 2>/dev/null; "
+    + "then omarchy-shell notifications dismissAll; "
+    + "else omarchy-shell notifications showHistory; fi"
+
   Grid {
     id: buttons
     anchors.centerIn: parent
@@ -40,7 +47,7 @@ BarWidget {
       text: "\u{f009a}"
       tooltipText: strings.t("notifications.tooltip")
       onPressed: function(button) {
-        if (button === Qt.LeftButton) root.run("omarchy-shell notifications showHistory")
+        if (button === Qt.LeftButton) root.run(root.toggleHistory)
         else if (button === Qt.RightButton) root.run("omarchy-shell notifications dismissAll")
       }
     }

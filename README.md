@@ -2,7 +2,7 @@
 
 Two bar buttons for the Omarchy shell:
 
-- **󰂚 Notification history**: click to show your recent notifications again; right-click to dismiss all.
+- **󰂚 Notification history**: click to show your recent notifications again, click again to hide them; right-click to dismiss all.
 - **󰅇 Clipboard history**: click to open the clipboard manager.
 
 They run the same actions as Omarchy's keybindings (Super+Shift+Alt+, and Super+Ctrl+V). Requires Omarchy 4.5 or later.
